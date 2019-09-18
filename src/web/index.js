@@ -74,6 +74,9 @@ const pauseVideo = () => {
 const seekTo = s => {
   player.seekTo(s).then(() => {});
 };
+const setPlaybackRate = s => {
+  player.setPlaybackRate(Number(s)).then(() => {});
+};
 
 const _setDuration = () =>
   player.getDuration().then(s => {
@@ -94,3 +97,4 @@ invoke.define("createPlayer", createPlayer);
 invoke.define("playVideo", playVideo);
 invoke.define("pauseVideo", pauseVideo);
 invoke.define("seekTo", seekTo);
+invoke.define("setPlaybackRate", setPlaybackRate);
